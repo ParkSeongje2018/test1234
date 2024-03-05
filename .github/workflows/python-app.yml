@@ -26,4 +26,4 @@ jobs:
       - uses: shufo/auto-assign-reviewer-by-assignee@v1.1.0
         with:
           config: '.github/auto-assigner.yml'
-          token: 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
+          token: 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
