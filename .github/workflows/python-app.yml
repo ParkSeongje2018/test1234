@@ -14,17 +14,9 @@ permissions:
 
 jobs:
   build:
-
     runs-on: self-hosted
 
     steps:
-    - name: "Assign Reviewers to PR"
-      uses: itsOliverBott/assign-pr-reviewers@release
-      with:
-        token: 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
-        users: "P P" # comma-separated (example: "itsOliverBott, SantaClaus, b4tman, sp0derman")
-        ignore-drafts: true # defaults to false if not provided
-  
     - name: Test with pytest
       run: |
         main.py
