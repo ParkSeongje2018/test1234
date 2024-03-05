@@ -1,17 +1,20 @@
-name: Our Workflow
-on: push
+name: Run Python Code
+
+on:
+  push:
+
 jobs:
-  checkout:
+  run-code:
     runs-on: self-hosted
-  
-  steps:
-     - name: Check out repository
-       uses: actions/checkout@v2
 
-     - name: Set up Python
-       uses: actions/setup-python@v2
-       with:
-         python-version: 3.x
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
 
-     - name: Run Python script
-       run: python main.py.
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+
+      - name: Run Python script
+        run: python main.py # 이곳에 실제 파이썬 파일명을 적어주세요.
